@@ -21,7 +21,7 @@ stage ('Build')
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/Jenkins-Pipeline/"${params.Service_name}" ; mvn clean install " 
+       sh "cd /home/ubuntu/workspace/Jenkins-Pipeline\"${params.Service_name}" ; mvn clean install " 
     }
 }
     stage ('dockerbuild') 

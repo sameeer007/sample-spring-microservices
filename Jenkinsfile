@@ -21,14 +21,14 @@ stage ('Build')
 {
     steps
     {
-       sh "cd /home/ubuntu/workspace/Jenkins-Pipeline/${param.Service_name} ; mvn clean install " 
+       sh "cd /home/ubuntu/workspace/Jenkins-Pipeline/${params.Service_name} ; mvn clean install " 
     }
 }
     stage ('dockerbuild') 
 {
     steps
     {
-        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline/${param.Service_name} ; sudo docker build -t $(param.Service_name) . " 
+        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline/${params.Service_name} ; sudo docker build t $(params.Service_name) . " 
     }
 }
      stage ('dockerimagepush ') 

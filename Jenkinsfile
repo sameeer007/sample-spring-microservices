@@ -28,7 +28,7 @@ stage ('Build')
 {
     steps
     {
-        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline/${param.Service_name}; sudo docker build -t $(param.Service_name) . " 
+        sh "cd /home/ubuntu/workspace/Jenkins-Pipeline/${param.Service_name} ; sudo docker build -t $(param.Service_name) . " 
     }
 }
      stage ('dockerimagepush ') 
